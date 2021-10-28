@@ -19,7 +19,7 @@ export const ComponentSearchBar = () => {
         type="text" 
         value={searchInput} 
         onChange={handleOnChange}
-        placeholder="Enter character" 
+        placeholder="Enter name" 
       />
       <StyledSubmitButton type="submit" value="SEARCH" />
     </StyledSearchForm>

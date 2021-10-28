@@ -20,7 +20,7 @@ const StyledSubmitButton = styled.input`
   padding: 0 0.5rem;
   background-color: white;
   
-  :hover{
+  :hover, :active {
     color: white;
     background-color: black;
   }

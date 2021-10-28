@@ -6,6 +6,8 @@ const StyledListButton = styled.button`
   background-color: white;
   border: 1px solid black;
   margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 0.5rem;
 
   :hover, :active {
     background-color: black;
