@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import logo from './assets/logo.svg';
+
+import { ComponentSearchBar } from './components/searchBar/ComponentSearchBar';
+
+import StyledMainContainer from './components/StyledMainContainer';
+import StyledHeadContainer from './components/StyledHeadContainer';
 
 function App() {
   return (
-    <>
-      <p>hej</p>
-    </>
+    <StyledMainContainer>
+      <StyledHeadContainer>
+        <img src={logo} alt="logo" />
+        <ComponentSearchBar />
+      </StyledHeadContainer>
+    </StyledMainContainer>
   );
 }
 

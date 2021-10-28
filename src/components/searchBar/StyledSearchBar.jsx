@@ -1,0 +1,38 @@
+import styled from 'styled-components';
+
+const StyledSearchBarContainer = styled.div`
+  width: 100%;
+`;
+
+const StyledSearchForm = styled.form`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid black;
+`;
+
+const StyledSearchInput = styled.input`  
+  border: none;
+  height: 2rem;
+  padding: 0 0.5rem;
+`
+
+const StyledSubmitButton = styled.input`
+  outline: 1px solid black;
+  border: none;
+  height: 2rem;
+  padding: 0 0.5rem;
+  background-color: white;
+  
+  :hover{
+    color: white;
+    background-color: black;
+`;
+
+export {
+  StyledSearchBarContainer,
+  StyledSearchForm,
+  StyledSearchInput,
+  StyledSubmitButton,
+};
+
