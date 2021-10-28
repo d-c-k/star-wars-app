@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-const StyledSearchBarContainer = styled.div`
-  width: 100%;
-`;
-
 const StyledSearchForm = styled.form`
   display: flex;
   justify-content: space-between;
@@ -27,10 +23,10 @@ const StyledSubmitButton = styled.input`
   :hover{
     color: white;
     background-color: black;
+  }
 `;
 
 export {
-  StyledSearchBarContainer,
   StyledSearchForm,
   StyledSearchInput,
   StyledSubmitButton,

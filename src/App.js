@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import logo from './assets/logo.svg';
 
 import { ComponentSearchBar } from './components/searchBar/ComponentSearchBar';
+import { ComponentListButton } from './components/listButton/ComponentListButton';
 
 import { getAllPeople } from './fetches/fetches';
 
@@ -14,13 +15,12 @@ function App() {
   const [people, setPeople] = useState([]);
 
   useEffect(() => {
+    setPeople([]);
     for(let page = 1; page < 10; page++){
       getAllPeople(page)
         .then(res => setPeople(people => [...people, ...res.data.results]));
     }
   }, [])
-
-  console.log(people);
 
   return (
     <StyledMainContainer>
@@ -31,8 +31,8 @@ function App() {
       <StyledListContainer>
         { people.length > 0
           ?
-          people.map((item) => {
-            return <p>{item.name}</p>
+          people.map((item, index) => {
+            return <ComponentListButton key={index} props={item} />
           })
           :
           <p>No characters found</p>

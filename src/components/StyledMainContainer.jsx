@@ -7,7 +7,7 @@ const StyledMainContainer = styled.div`
   overflow: hidden;
 
   @media screen and (max-width: 640px){
-    grid-template-columns: 1rem 1fr 1fr 1rem;
+    grid-template-columns: 1rem 1fr 1rem;
   }
 
   @media screen and (min-width: 641px){

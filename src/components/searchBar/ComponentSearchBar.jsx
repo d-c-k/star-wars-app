@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import {
-  StyledSearchBarContainer,
   StyledSearchForm,
   StyledSearchInput,
   StyledSubmitButton,
@@ -15,17 +14,15 @@ export const ComponentSearchBar = () => {
   }
 
   return (
-    <StyledSearchBarContainer>
-      <StyledSearchForm>
-        <StyledSearchInput 
-          type="text" 
-          value={searchInput} 
-          onChange={handleOnChange}
-          placeholder="Enter character" 
-        />
-        <StyledSubmitButton type="submit" value="SEARCH" />
-      </StyledSearchForm>
-    </StyledSearchBarContainer>
+    <StyledSearchForm>
+      <StyledSearchInput 
+        type="text" 
+        value={searchInput} 
+        onChange={handleOnChange}
+        placeholder="Enter character" 
+      />
+      <StyledSubmitButton type="submit" value="SEARCH" />
+    </StyledSearchForm>
   ) 
 };
 

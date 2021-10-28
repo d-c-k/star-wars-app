@@ -6,6 +6,7 @@ const StyledListContainer = styled.div`
     
   @media screen and (max-width: 640px){
     grid-column: 2;
+    padding: 2rem 0 1rem 0;
   }
 
   @media screen and (min-width: 641px){
