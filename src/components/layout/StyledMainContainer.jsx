@@ -11,13 +11,15 @@ const StyledMainContainer = styled.div`
   }
 
   @media screen and (min-width: 641px){
-    grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
+    grid-template-columns: 1fr 2fr;
     grid-column-gap: 1rem;
+    margin-left: 1rem;
   }
 
   @media screen and (min-width: 1008px){
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 50%;
     grid-column-gap: 2rem;
+    margin-left: 2rem;
   }
 `;
 

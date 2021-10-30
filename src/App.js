@@ -7,11 +7,12 @@ import logo from './assets/logo.svg';
 
 import { ComponentSearchBar } from './components/searchBar/ComponentSearchBar';
 import { ComponentListButton } from './components/listButton/ComponentListButton';
-import { ComponentDetailArea } from './components/listButton/ComponentDetailArea';
+import { ComponentDetailArea } from './components/detailArea/ComponentDetailArea';
 
 import StyledMainContainer from './components/layout/StyledMainContainer';
 import StyledHeadContainer from './components/layout/StyledHeadContainer';
 import StyledListContainer from './components/layout/StyledListContainer';
+import StyledDetailContainer from './components/layout/StyledDetailContainer';
 
 function App() {
   const [people, setPeople] = useState([]);
@@ -57,7 +58,11 @@ function App() {
             <p>No characters found</p>
           }
         </StyledListContainer>
-        {focused && <ComponentDetailArea.jsx props={focused} />}
+        { focused &&
+        <StyledDetailContainer>
+          <ComponentDetailArea props={focused} />
+        </StyledDetailContainer>
+        }
       </DataContext.Provider>
     </StyledMainContainer>
   );

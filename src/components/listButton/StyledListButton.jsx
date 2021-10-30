@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 const StyledListButton = styled.button`
   width: 100%;
-  height: 2rem;
+  min-height: 2rem;
   background-color: white;
   border: 1px solid black;
   margin-bottom: 1rem;
   text-align: left;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
 
   :hover, :active {
     background-color: black;

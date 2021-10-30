@@ -9,11 +9,11 @@ const StyledListContainer = styled.div`
   }
 
   @media screen and (min-width: 641px){
-    grid-column: 2;
+    grid-column: 1;
   }
 
   @media screen and (min-width: 1008px){
-    grid-column: 3;
+    grid-column: 2;
   }
 `;
 

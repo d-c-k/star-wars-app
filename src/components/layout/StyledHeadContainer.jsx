@@ -8,15 +8,15 @@ const StyledHeadContainer = styled.div`
   }
 
   @media screen and (min-width: 641px){
-    grid-column: 2;
+    grid-column: 1;
   }
 
   @media screen and (min-width: 1008px){
-    grid-column: 2;
+    grid-column: 1;
   }
 
   img {
-    width: 100%;
+    min-width: 100%;
   }
 `;
 

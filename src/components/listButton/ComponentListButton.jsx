@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { DataContext } from '../../contexts/DataContext';
 
 import StyledListButton from './StyledListButton';
 
 export const ComponentListButton = ({props}) => {
+  const { setFocused } = useContext(DataContext);
+
   const handleOnClick = () => {
-    console.log(props);
+    setFocused(props);
   }
 
   return (
