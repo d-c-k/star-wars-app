@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const StyledListButton = styled.button`
+  cursor: pointer;
   width: 100%;
   min-height: 2rem;
   background-color: white;

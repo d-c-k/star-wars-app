@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledHeadContainer = styled.div`
   margin-top: 2rem;
-    
+
   @media screen and (max-width: 640px){
     grid-column: 2;
   }

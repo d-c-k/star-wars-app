@@ -14,10 +14,11 @@ const StyledSearchInput = styled.input`
 `
 
 const StyledSubmitButton = styled.input`
+  cursor: pointer;
   outline: 1px solid black;
   border: none;
   height: 2rem;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   background-color: white;
   
   :hover, :active {
