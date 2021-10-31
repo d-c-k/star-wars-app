@@ -11,6 +11,9 @@
   border-radius: 0;
   box-shadow: none;
 
+  -webkit-border-radius: 0;
+  -webkit-box-shadow: none;
+
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
