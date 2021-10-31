@@ -49,7 +49,7 @@ function App() {
     <StyledMainContainer>
       <DataContext.Provider value={DataContextValue}>
         <StyledHeadContainer>
-          <a href="/">
+          <a href="/star-wars-app/">
             <img src={logo} alt="logo" />
           </a>
           <ComponentSearchBar />
