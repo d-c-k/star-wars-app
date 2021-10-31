@@ -8,6 +8,9 @@
   outline: none;
   color: black;
 
+  border-radius: 0;
+  box-shadow: none;
+
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
