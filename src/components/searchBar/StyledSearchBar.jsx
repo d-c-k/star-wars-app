@@ -22,6 +22,8 @@ const StyledSubmitButton = styled.input`
   height: 2rem;
   padding: 0.5rem;
   background-color: white;
+  border-radius: 0;
+  box-shadow: none;
   
   :hover, :active {
     color: white;
