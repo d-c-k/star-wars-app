@@ -17,11 +17,14 @@ import StyledDetailContainer from './components/layout/StyledDetailContainer';
 function App() {
   const [people, setPeople] = useState([]);
   const [focused, setFocused] = useState(null);
+  const [errorMsg, setErrorMsg] = useState('Loading...');
   const DataContextValue = {
     people,
     setPeople,
     focused,
-    setFocused
+    setFocused,
+    errorMsg,
+    setErrorMsg,
   };
 
   useEffect(() => {
@@ -29,7 +32,8 @@ function App() {
     const getData = (path) => {
       axios.get(path).then(res => {
         processResponse(res.data);
-      });
+      })
+      .catch(err => setErrorMsg('Server error, data not loading.'));
     };
 
     const processResponse = (data) => {
@@ -45,7 +49,9 @@ function App() {
     <StyledMainContainer>
       <DataContext.Provider value={DataContextValue}>
         <StyledHeadContainer>
-          <img src={logo} alt="logo" />
+          <a href="/">
+            <img src={logo} alt="logo" />
+          </a>
           <ComponentSearchBar />
         </StyledHeadContainer>
         <StyledListContainer>
@@ -55,7 +61,7 @@ function App() {
               return <ComponentListButton key={index} props={item} />
             })
             :
-            <p>No characters found</p>
+            <p>{errorMsg}</p>
           }
         </StyledListContainer>
         { focused &&

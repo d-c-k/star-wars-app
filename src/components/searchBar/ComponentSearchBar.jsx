@@ -11,15 +11,19 @@ import {
 
 export const ComponentSearchBar = () => {
   const [searchInput, setSearchInput] = useState('');
-  const { setPeople } = useContext(DataContext);
+  const { setPeople, setErrorMsg } = useContext(DataContext);
   
   const getData = (path) => {
     axios.get(path).then(res => {
       processResponse(res.data);
-    });
+    })
+    .catch(err => setErrorMsg('Server error, data not loading.'));
   };
 
   const processResponse = (data) => {
+    if(data.results < 1){
+      setErrorMsg('No data found');
+    };
     setPeople(people => [...people, ...data.results]);
     data.next && getData(data.next);
   };
